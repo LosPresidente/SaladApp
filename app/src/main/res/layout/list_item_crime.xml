@@ -26,18 +26,16 @@
         android:id="@+id/crime_date"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:text="Crime Date"
-        app:layout_constraintEnd_toStartOf="@+id/crime_solved"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/crime_title" />
 
     <ImageView
         android:id="@+id/crime_solved"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="101dp"
+        android:layout_height="102dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="16dp"
         android:layout_marginTop="8dp"
@@ -45,5 +43,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/ic_solved" />
+        app:srcCompat="@drawable/salad" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="To buy"
+        app:layout_constraintEnd_toStartOf="@+id/crime_solved"
+        app:layout_constraintStart_toEndOf="@+id/crime_date"
+        app:layout_constraintTop_toBottomOf="@+id/crime_title" />
 </android.support.constraint.ConstraintLayout>

@@ -21,12 +21,25 @@ public class CrimeLab {
 
     private CrimeLab(Context context) {
         mCrimes = new ArrayList<>();
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 5; i++) {
             Crime crime = new Crime();
-            crime.setTitle("Crime #" + i);
-            crime.setSolved(i % 2 == 0);
+            if(i==0){
+                crime.setTitle("Fruit salad");
+            }else if(i==1){
+                crime.setTitle("banana");
+            }else if(i==2){
+                crime.setTitle("apple");
+            }else if(i==3){
+                crime.setTitle("pineapple");
+            }else if(i==4){
+                crime.setTitle("coconut");
+            }
+
+            crime.setSolved(i==0);
             mCrimes.add(crime);
         }
+
+
     }
 
     public List<Crime> getCrimes() {
